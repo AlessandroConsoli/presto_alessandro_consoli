@@ -1,19 +1,16 @@
 <x-layout>
     <div class="container-fluid text-center bg-body-tertiary">
-        <div class="row vh-80 body-bg justify-content-center align-items-center">
+        <div class="row vh-100 body-bg justify-content-center align-items-center">
             <div class="col-12">
-                <h1 class="display-1 mt-custom">Presto.it</h1>
-                <div class="my-3">
+                <h1 class="display-1">Archivio articoli</h1>
+                <div class="my-5">
                     @auth
-                        <a class="btn btn-dark" href="{{route('article.create')}}">Pubblica un articolo</a>
+                        <a class="btn btn-dark" href="{{route('article.create')}}">Inserisci un articolo</a>
                     @endauth
                 </div>
             </div>
         </div>
         <div class="row body-bg height-custom justify-content-center align-items-center py-5">
-            <div>
-                <h2 class="my-5">Articoli recenti</h2>
-            </div>
             @forelse ($articles as $article)
                 <div class="col-12 col-md-3">
                     <x-card :article="$article" />
@@ -25,6 +22,11 @@
                     </h3>
                 </div>
             @endforelse
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div>
+            {{$articles->links()}}
         </div>
     </div>
 </x-layout>
