@@ -49,6 +49,11 @@
           <li>
             <a href="{{route('article.create')}}" class="dropdown-item text-custom">Crea un articolo</a>
           </li>
+          @if (Auth::user()->is_revisor)
+          <li>
+            <a class="dropdown-item text-custom" href="{{route('revisor.index')}}">{{\App\Models\Article::toBeRevisionedCount()}} da revisionare</a>
+          </li>
+          @endif
         </ul>
       </li>      
       @else

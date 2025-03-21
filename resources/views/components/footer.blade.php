@@ -117,10 +117,10 @@
         <!-- Section: CTA -->
         <section class="">
             <p class="d-flex justify-content-center align-items-center">
-                <span class="me-3">Register for free</span>
-                <button type="button" class="btn btn-outline-light btn-rounded">
-                    Sign up!
-                </button>
+                <span class="me-3">Vuoi diventare revisore?</span>
+                <a href="{{route('become.revisor')}}" class="btn btn-outline-light btn-rounded">
+                    Candidati qui!
+                </a>
             </p>
         </section>
         <!-- Section: CTA -->

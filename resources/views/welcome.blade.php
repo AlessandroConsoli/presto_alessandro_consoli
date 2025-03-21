@@ -1,6 +1,16 @@
 <x-layout>
     <div class="container-fluid text-center bg-body-tertiary">
         <div class="row vh-80 body-bg justify-content-center align-items-center">
+            @if (session()->has('message'))
+            <div class="alert alert-success text-center shadow rounded w-50 mt-5">
+            {{session('message')}}
+            </div>
+            @endif
+            @if (session()->has('errorMessage'))
+            <div class="alert alert-danger text-center shadow rounded w-50 mt-5">
+            {{session('errorMessage')}}
+            </div>
+            @endif
             <div class="col-12">
                 <h1 class="display-1 mt-custom">Presto.it</h1>
                 <div class="my-3">

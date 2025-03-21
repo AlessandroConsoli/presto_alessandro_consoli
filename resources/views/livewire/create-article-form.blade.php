@@ -21,7 +21,7 @@
         @enderror
     </div>
     <div class="mb-3">
-        <label for="price" class="form-label">Prezzo:</label>
+        <label for="price" class="form-label">Prezzo in €</label>
         <input type="text" id="price" 
             class="form-control @error('price') is-invalid @enderror" wire:model.live.debounce.150ms="price">
         @error('title')
