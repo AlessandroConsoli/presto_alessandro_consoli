@@ -29,7 +29,7 @@
         </li>
         @auth
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle active text-warning" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Ciao, {{Auth::user()->name}}!
           </a>
           <ul class="dropdown-menu">
@@ -58,7 +58,7 @@
       </li>      
       @else
       <li class="nav-item dropdown active">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle text-warning" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Ciao!
         </a>
         <ul class="dropdown-menu">
@@ -68,6 +68,10 @@
       </li>      
       @endauth
       </ul>
+      <form class="d-flex ms-auto" role="search" action="{{route('article.search')}}" method="GET">
+        <input class="form-control me-2 text-warning custom-placeholder" name="query" type="search" placeholder="Cerca un articolo" aria-label="Search">
+        <button class="btn btn-outline-warning" type="submit">Cerca</button>
+      </form>
     </div>
   </div>
 </nav>
