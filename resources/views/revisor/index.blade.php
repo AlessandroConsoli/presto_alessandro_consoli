@@ -1,8 +1,8 @@
 <x-layout>
     <div class="container-fluid pt-5">
         <div class="row">
-            <div class="col-3">
-                <div class="rounded shadow bg-body-secondary">
+            <div class="col-8">
+                <div class="rounded shadow bg-body-secondary border border-2 border-dark">
                     <h1 class="display-5 text-center pb-2">
                         Revisor Dashboard
                     </h1>
@@ -16,10 +16,16 @@
                 </div>
             </div>
         @endif
-        @if ($article_to_check)
         <div class="row justify-content-center pt-5">
             <div class="col-md-8">
                 <div class="row justify-content-center">
+        @if ($article_to_check->images->count())
+            @foreach ($article_to_check->images as $key => $image)
+            <div class="col-6 col-md-4 mb-4 text-center">
+                <img src="{{Storage::url($image->path)}}" class="img-fluid rounded shadow" alt="Immagine {{$key +1}} dell'articolo {{article_to_check->title}}">                
+            @endforeach
+        @elseif ($article_to_check)
+
                     @for ($i = 0; $i < 6; $i++)
                     <div class="col-6 col-md-4 mb-4 text-center">
                         <img src="https://picsum.photos/300" class="img-fluid rounded shadow" alt="img Segnaposto">

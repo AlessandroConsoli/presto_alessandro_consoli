@@ -1,5 +1,5 @@
 .body-bg{
-    background-color: orange;
+    background-color: orange !important;
 }
 
 .height-custom{
@@ -29,6 +29,18 @@
 
 .custom-placeholder::placeholder {
     color: orange !important;
+}
+
+.form-control::file-selector-button{
+    background-color: orange !important;
+}
+
+.img-preview{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+    width: 120px;
 }
 
 .card-w{
