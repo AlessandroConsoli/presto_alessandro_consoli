@@ -7,7 +7,10 @@ use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
+//! Ricerca
 Route::get('/article/search', [PublicController::class, 'searchArticles'])->name('article.search');
+//! Cambio Lingua
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
 
 //! ArticleController
 Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create')->middleware('auth');

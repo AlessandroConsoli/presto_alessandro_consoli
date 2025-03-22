@@ -7,19 +7,19 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
+          <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">{{__('ui.homepage')}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{route('article.index')}}">Archivio articoli</a>
+          <a class="nav-link active" aria-current="page" href="{{route('article.index')}}">{{__('ui.allArticles')}}</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Sfoglia le categorie
+            {{__('ui.browseCategories')}}
           </a>
           <ul class="dropdown-menu">
             @foreach ($categories as $category)
                 <li>
-                  <a href="{{route('article.byCategory', ['category' => $category])}}" class="dropdown-item text-capitalize text-custom">{{$category->name}}</a>
+                  <a href="{{route('article.byCategory', ['category' => $category])}}" class="dropdown-item text-capitalize text-custom">{{__("ui.$category->name")}}</a>
                 </li>
                 @if (!$loop->last)
                     <hr class="dropdown-divider">
@@ -30,7 +30,7 @@
         @auth
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle active text-warning" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Ciao, {{Auth::user()->name}}!
+            {{__('ui.hello')}}, {{Auth::user()->name}}!
           </a>
           <ul class="dropdown-menu">
             <li>
@@ -59,18 +59,28 @@
       @else
       <li class="nav-item dropdown active">
         <a class="nav-link dropdown-toggle text-warning" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Ciao!
+          {{__('ui.hello')}}
         </a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item text-custom" href="{{route('login')}}">Login</a></li>
-          <li><a class="dropdown-item text-custom" href="{{route('register')}}">Registrati</a></li>
+          <li><a class="dropdown-item text-custom" href="{{route('register')}}">{{__('ui.register')}}</a></li>
         </ul>
       </li>      
       @endauth
       </ul>
+      <li class="nav-item dropdown active ms-auto">
+        <a class="nav-link dropdown-toggle text-warning" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          {{__('ui.changeLang')}}
+        </a>
+        <ul class="dropdown-menu">
+          <li><x-_locale lang="it" /></li>
+          <li><x-_locale lang="en" /></li>
+          <li><x-_locale lang="es" /></li>
+        </ul>
+      </li>     
       <form class="d-flex ms-auto" role="search" action="{{route('article.search')}}" method="GET">
-        <input class="form-control me-2 text-warning custom-placeholder" name="query" type="search" placeholder="Cerca un articolo" aria-label="Search">
-        <button class="btn btn-outline-warning" type="submit">Cerca</button>
+        <input class="form-control me-2 text-warning custom-placeholder" name="query" type="search" placeholder="{{__('ui.searchArticle')}}" aria-label="Search">
+        <button class="btn btn-outline-warning" type="submit">{{__('ui.search')}}</button>
       </form>
     </div>
   </div>
