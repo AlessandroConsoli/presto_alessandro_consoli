@@ -51,6 +51,16 @@
     background-color: rgb(164, 245, 177);
 }
 
+.custom-carousel {
+    max-width: 350px; 
+    margin: auto;     
+}
+
+.custom-carousel .carousel-item img {
+    max-height: 300px; 
+    object-fit: cover; 
+}
+
 .carousel-text{
     background-color: rgba(0, 0, 0, 0.533);
 }

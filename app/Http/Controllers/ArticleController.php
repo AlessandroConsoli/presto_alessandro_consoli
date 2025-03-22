@@ -22,7 +22,7 @@ class ArticleController extends Controller
     }
 
     public function byCategory(Category $category){
-        $articles = $category->articles->where('is_accepted, true');
+        $articles = $category->articles->where('is_accepted', true);
         return view('article.byCategory', compact('articles', 'category'));
     }
 
