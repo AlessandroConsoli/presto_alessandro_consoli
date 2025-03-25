@@ -16,6 +16,12 @@ class Image extends Model
         'path'
     ];
 
+    protected function casts(): array{
+        return [
+            'labels' => 'array',
+        ];
+    }
+
     public function article() : BelongsTo{
         return $this->belongsTo(Article::class);
     }

@@ -16,10 +16,7 @@
                     <h5 class="text-uppercase">FOOTER CONTENT</h5>
                     
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Molestiae modi cum ipsam ad, illo possimus laborum ut
-                        reiciendis obcaecati. Ducimus, quas. Corrupti, pariatur eaque?
-                        Reiciendis assumenda iusto sapiente inventore animi?
+                        Classico esempio di footer
                     </p>
                 </div>
                 <!--Grid column-->
@@ -117,8 +114,8 @@
         <!-- Section: CTA -->
         <section class="">
             <p class="d-flex justify-content-center align-items-center">
-                <span class="me-3">Vuoi diventare revisore?</span>
-                <a href="{{route('become.revisor')}}" class="btn btn-outline-light btn-rounded">
+                <span class="me-3 text-warning">Vuoi diventare revisore?</span>
+                <a href="{{route('become.revisor')}}" class="btn btn-outline-warning btn-rounded">
                     Candidati qui!
                 </a>
             </p>
