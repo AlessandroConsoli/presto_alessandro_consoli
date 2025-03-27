@@ -22,7 +22,7 @@
         </div>
         <div class="row body-bg height-custom justify-content-center align-items-center py-5">
             <div>
-                <h2 class="my-5">Articoli recenti</h2>
+                <h2 class="my-5">{{__('ui.recentArticles')}}</h2>
             </div>
             @forelse ($articles as $article)
                 <div class="col-12 col-md-3">

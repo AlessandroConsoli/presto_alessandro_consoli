@@ -18,6 +18,7 @@ return[
     'libri e riviste' => 'Libros y revistas',
     'motori' => 'Motores',
     'salute e bellezza' => 'Salud y belleza',
-    'sport' => 'deporte'
+    'sport' => 'deporte',
+    'recentArticles' => 'Articolos recentes'
 
 ];
