@@ -36,7 +36,7 @@
         @enderror
         @error('temporary_images')
         <p class="fst-italic text-danger">{{$message}}</p>
-    @enderror
+        @enderror
     </div>
     @if (!empty($images))
         <div class="row">

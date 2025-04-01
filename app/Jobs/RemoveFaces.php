@@ -27,7 +27,7 @@ class RemoveFaces implements ShouldQueue
     /**
      * Execute the job.
      */
-    public function handle(): void
+    public function handle()
     {
         $i = Image::find($this->article_image_id);
         if (!$i) {

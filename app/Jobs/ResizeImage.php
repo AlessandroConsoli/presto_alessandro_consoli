@@ -22,9 +22,7 @@ class ResizeImage implements ShouldQueue
         $this->h = $h;
     }
 
-    /**
-     * Execute the job.
-     */
+    
     public function handle(): void
     {
         $w = $this->w;
