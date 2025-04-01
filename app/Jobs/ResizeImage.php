@@ -5,6 +5,7 @@ namespace App\Jobs;
 use Spatie\Image\Image;
 use Spatie\Image\Enums\CropPosition;
 use Illuminate\Foundation\Queue\Queueable;
+use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
 class ResizeImage implements ShouldQueue
