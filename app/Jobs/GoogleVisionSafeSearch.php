@@ -14,6 +14,9 @@ class GoogleVisionSafeSearch implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
+    public $tries = 5;
+    public $backoff = 10;
+
     private $article_image_id;
     public function __construct($article_image_id)
     {
